@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Domine:wght@400..700&family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Limelight&display=swap" rel="stylesheet">
+  
+  </head>
+<body onload="showPosts()">
+ <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKlPh6f6ZKY3Rq3GbBK-X3oa8UMzV9DrlZgg&s" /> -->
+  <!-- border -->
+<div class="topBorder">
+
+<div id="floatRightImage">
+  <div class="header"> 
+  <h1>Rate My Club</h1>
+  <img id = "petr" class = "petr" src = "petr.svg" width = "200" height = "80">
+  <div>
+  <p class= "underHeader">Zot zot zot</p>
+</div>
+  </div>
+  
+  <div>
+    <img id= "logo" class="logo" src= "final-logo.svg" width="200" height="80">
+  </div>
+</div>
+</div>
+
+<br>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn" class="myBtn">Add a rating</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+
+      <label for="clubs">Choose a Club:</label>
+      <select name="clubs" id="clubs">
+        <option value="Hack at UCI">Hack at UCI</option>
+        <option value="ICSSC">ICS Student Council</option>
+        <option value="WICS">Women in Information and Computer Sciences</option>
+        <option value="Design at UCI">Design at UCI</option>
+        <option value="Quant Club at UCI">Quantum Computing Club at UCI</option>
+        <option value="ACM">Association for Computing Machinery - ACM</option>
+        <option value="Cyber at UCI">Cyber at UCI</option>
+        <option value="Data @ UCI">Data @ UCI</option>
+        <option value="AI at UCI">Artificial Intelligence at UCI</option>
+        <option value="VGDC">Video Game Development Club</option>
+      </select>
+
+    
+
+      <select name="stars" id="starsrating">
+        <option value="1 star">1 Star</option>
+        <option value="2 stars">2 Stars</option>
+        <option value="3 stars">3 Stars</option>
+        <option value="4 stars">4 Stars</option>
+        <option value="5 stars">5 Stars</option>
+      </select>
+      <br>
+      <br>
+
+      <h4>Please rate this club with the following criteria. <br> </h4> 
+
+      <br>
+
+      <label for="exclusivity">How hard is it to get in?</label>
+      <select name="exclusive" id="exclusive">
+        <option value="1">1  - Easy</option>
+        <option value="2">2 - Kind of Easy</option>
+        <option value="3">3 - Neutral</option>
+        <option value="4">4 - Difficult</option>
+        <option value="5">5 - Very Difficult</option>
+      </select>
+
+      <br>
+      <br>
+
+      <label for="social">How social is this club?</label>
+
+      <select name="social" id="socialrating">
+        <option value="1">1 - None</option>
+        <option value="2">2 - Very Little</option>
+        <option value="3">3 - Okay</option>
+        <option value="4">4 - Social</option>
+        <option value="5">5 - Very Social</option>
+      </select>
+
+      <br>
+      <br>
+
+      <label for="fname">Comments:</label>
+      <input type="text" id="fname" name="fname">
+      <hr>
+      <br>
+      <button id="submit" class= "submit" onclick="submitForm()"> Submit </button>
+
+
+  </div>
+
+</div>
+
+<!--The posts-->
+<div id="postsContainer">
+  
+  <script src="script.js"></script></div>
+
+
+<br>
+<br>
+
+
+</body>
+</html>

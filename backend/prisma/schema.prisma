@@ -1,0 +1,27 @@
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  directUrl         = env("DIRECT_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Post {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  ratings     Rating[] @relation("PostRatings") // Define the relation to Rating
+  picture String?
+}
+
+model Rating {
+  id          String   @id @default(cuid()) // Use cuid() for unique IDs
+  comment     String
+  rating      Int
+  exclusivity Int
+  social      Int
+  postId      Int      // Foreign key for Post
+  post        Post     @relation("PostRatings", fields: [postId], references: [id]) // Relation to Post
+}
